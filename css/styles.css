@@ -12,6 +12,14 @@ body {
     background-color: #fefefe;
 }
 
+#logo {
+    position: absolute;
+    top:80px;
+    margin-left:42%;
+    width: 200px;
+    height:150px;
+}
+
 a:link, a:visited, a:hover {color:black;}
 
 #main{
@@ -28,11 +36,6 @@ a:link, a:visited, a:hover {color:black;}
     font-family: 'Ma Shan Zheng', cursive;
 }
 
-#t-note {
-    width: 10%; height: 140px;
-    margin-left: -3%; margin-right: -4.1%;
-}
-
 #searchbtn { 
     background: white;
     border: white solid 0px;
@@ -47,6 +50,8 @@ a:link, a:visited, a:hover {color:black;}
 }
 
 #searchbtn a { text-decoration: none;}
+
+.section-head-hide {display: none;}
 
 section .wave {
     position: absolute;
@@ -188,14 +193,14 @@ nav ul li {list-style: none;}
 }
 
 @media only screen and (max-width: 600px) {
+    #logo {
+        margin-left: 33%;
+        width:130px;
+        height: 100px;
+    }
     #main {height:88vh;}
     #main h2 {
         font-size: 5em;letter-spacing: 2px;
-    }   
-    #t-note { 
-        height: 90px; width:120px;
-        margin-left:-35px;
-        margin-right: -48px;
     }
     #searchbtn {
         display: block;
