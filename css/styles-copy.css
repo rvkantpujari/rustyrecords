@@ -16,7 +16,7 @@ a:link, a:visited, a:hover {color:black;}
 
 #main{
     width: 100%;
-    height: 98vh;
+    height: 100vh;
     background: #3586ff;
     overflow: hidden;
 }
@@ -43,7 +43,6 @@ a:link, a:visited, a:hover {color:black;}
     font-size: 20px;
     width: 200px;
     font-family: 'Poppins', sans-serif;
-    cursor:pointer;
 }
 
 #searchbtn a { text-decoration: none;}
@@ -141,19 +140,19 @@ section .wave.wave3 {
     margin-bottom: 5px;
 }
 
-.searchby-img{
+#searchby-img1, #searchby-img2, #searchby-img3{
     height: 200px;
     max-width: 280px;
 }
 
-.searchby-item-title{
+.searchby-item-title, .searchby-item-title, .searchby-item-title{
     display: block;
     margin-top: 10px;
     font-family: 'Poppins', sans-serif;
 }
 
 .item:hover {
-    border: 4px solid #3586ff;
+    border: 2px solid #3586ff;
     border-radius: 4px;
 }
 
@@ -187,11 +186,11 @@ nav ul li {list-style: none;}
     height: 40px;
 }
 
-@media only screen and (max-width: 600px) {
-    #main {height:88vh;}
-    #main h2 {
+/* Smartphones */
+@media (max-width:768px){
+    #main h2{
         font-size: 5em;letter-spacing: 2px;
-    }   
+    }
     #t-note { 
         height: 90px; width:120px;
         margin-left:-35px;
@@ -204,12 +203,26 @@ nav ul li {list-style: none;}
     }
     .grid-container {
         display: block;
-        grid-template-columns: '2fr 2fr 2fr';
+        grid-template-columns: 2fr 2fr 2fr;
         padding:5px;
     }
-    .searchby-img{ height: 140px; max-width: 220px;}
-    .container li.devs{font-size: 18px;}
-    .container li.devs strong{
-        font-size: 22px; font-family: 'Poppins', sans-serif;
+    #searchBy { margin-top: 0; margin-bottom: 20px;}
+
+    /*Mobile first Footer*/
+    .container li.devs{font-size: 14px;}
+    .container li.devs strong{font-size: 16px;}
+    .social-icon {
+        width: 30px;
+        height: 30px;
     }
+}
+
+/* Tablets */
+@media (min-width:668px) and (max-width:1024px){
+    #searchbtn {
+        display: block;
+        margin-left:50%;
+        margin-top: 10px;
+    }
+    #searchBy { margin-top: 10px;}
 }
