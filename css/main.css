@@ -61,12 +61,6 @@ a:link, a:visited, a:hover {color:black;}
 
 #searchbtn a { text-decoration: none;}
 
-
-
-.section-top{
-    margin-top:40px;
-}
-
 .section-head-hide {display: none;}
 
 section .wave {
@@ -144,12 +138,13 @@ input[type=text].search {
     background-repeat: no-repeat;
     padding: 12px 20px 12px 10px;
     transition: width 0.4s ease-in-out;
-    margin: 15px 0 15px 1%;
+    margin: 15px 0 0 11%;
 }
 
 input[type=text].search:focus {
-    width: 60%;
+    width: 78%;
 }
+
 
 .grid-container {
     display: grid;
@@ -165,20 +160,24 @@ input[type=text].search:focus {
 }
 
 #searchBy {
-    margin-top: 150px;
+    margin-top: 90px;
 }
 
-section h2{
+h2{
     margin-left: 10%;
     font-size: 32px;
     font-family: 'Poppins', sans-serif;
 }
+
+h2.hidden { display: none;}
 
 .hr-head {
     width: 80%;
     margin:auto;
     margin-bottom: 5px;
 }
+
+.hr-full { width: 100%; }
 
 .searchby-img{
     height: 200px;
@@ -226,11 +225,6 @@ nav ul li {list-style: none;}
     height: 40px;
 }
 
-.placeholder-img {
-    margin: 10px 0px 20px 0px;
-    width:300px; height: 100px;
-}
-
 @media only screen and (max-width: 600px) {
     #logo {
         margin-left: 33%;
@@ -251,13 +245,9 @@ nav ul li {list-style: none;}
         grid-template-columns: '2fr 2fr 2fr';
         padding:5px;
     }
-    section h2 {font-size: 20px;}
     .searchby-img{ height: 140px; max-width: 220px;}
     .container li.devs{font-size: 18px;}
     .container li.devs strong{
         font-size: 22px; font-family: 'Poppins', sans-serif;
-    }
-    .placeholder-img {
-        margin: 0px 0px 20px 0px;
     }
 }
