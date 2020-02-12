@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:500|Ma+Shan+Zheng&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.hidden { display: none; }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 100vh;
+    grid-template-areas: 
+    "left   right"
+}
+
+.top-left-home-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+}
+
+section.left {
+    grid-area: "left";
+    background-color: #3586ff;
+    font-family: 'Ma Shan Zheng', cursive;
+    color: white;
+}
+
+section.left h2 {
+    font-size:6em;
+    position: relative;
+    top:40%;
+    left: 15%;
+    letter-spacing: 2px;
+}
+
+section.right {
+    grid-area: "right";
+    background-color: white;
+}
+
+
+
+nav ul li {list-style: none; display: inline;}
+
+.logo {position: absolute; top: 160px; right: 340px;}
+
+.svg-logo {
+    position: absolute; top: 150px; right: 250px;
+}
+
+img.logo {
+    width: 100px;
+    height: 70px;
+}
+
+form {
+    margin-top:100px;
+}
+
+li.logo .name { 
+    color: white; font-size: 26px;
+    position: relative;
+    left: -135px; top:10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.box-container {
+    display: block;
+    margin: 15vh auto;
+    height: 55vh;
+    width: 35vw;
+    border:2px solid black;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-top: 120px;
+}
+
+.box-container:hover {
+    border:2px solid #3586ff;
+}
+
+.box-container input {
+    display: block;
+    padding:10px;
+    width:400px;
+    border-radius: 4px;
+    background: white;
+    margin:20px auto;
+}
+
+.box-container input:focus {
+    border:2px solid red;
+}
+
+#email { margin-top: 125px; }
+
+.link-text { position: relative; left: 100px; top: 25px;}
+
+input[type="submit"] {
+    width:100px;
+    height: 50px;
+    background: #3599ff;
+    color: white;
+    font-size:20px;
+    position: relative;
+    left: 150px;
+    top:-30px;
+    font-family: 'Poppins',sans-serif;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+input[type="submit"]:hover {
+    background-color: #3586ff;
+}
+
+@media only screen and  (max-width:600px) {
+    .top-left-home-icon {display: none;}
+    * {box-sizing: border-box;}
+    .left {display: none;}
+    .box-container { display: block; margin: 50% auto auto 15%; width: 100%; }
+    .box-container input { padding: 6px; }
+    #email { margin-top: -160px; }
+    .link-text { position: relative; left: 50px; top: 0px;}
+    input[type=text], input[type=password], input[type=email] {width: 70%;}
+    input[type=text] {margin-top:-60%;}
+    input[type=submit] { 
+        position: relative; left: 50px; top:-5px;
+        width: 80px; height: 40px;
+        font-size:16px;
+        padding-top: 5px;
+    }
+    .logo {
+        position: relative;
+        top: -100px;
+        left: 30%;
+    }
+    svg {display: none;}
+}
