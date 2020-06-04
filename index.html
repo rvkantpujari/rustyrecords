@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Rusty Records</title>
+        <title>RR</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <link rel="icon" href="./img/favicon.ico">
         <link rel="stylesheet" href="./css/styles.css">
     </head>
     <body>
-        <h1 class="section-head-hide">Rusty Records</h1>
         <section id="main">
             <img src="./img/logo_tp.png" alt="Logo" id=logo>
-            <h2>Rusty Records</h2>
+            <h1>Rusty Records</h1>
             <a href="#searchBy">
                 <button id="searchbtn">Search</button>
             </a>
@@ -18,146 +17,68 @@
             <div class="wave wave2"></div>
             <div class="wave wave3"></div>
         </section>
-        <section id="searchBy">
-            <h2>Search By:
-                <input type="text" class="search" name="search" placeholder="Search... Song, Singer or Movie...">
-            </h2>
-            <hr class="hr-head">
-            <div class="grid-container">
-                <div class="grid-item"></div>
-                <section class="grid-item item">
-                    <h2 class="section-head-hide">Singer</h2>
-                    <a href="#topArtists"><img class="searchby-img" src="img/searchby-singer.png" alt="Search by singer"/>
-                    <span class="searchby-item-title">Singer</span></a>
-                </section>
-                <section class="grid-item item">
-                    <h2 class="section-head-hide">Movie</h2>
-                    <a href="#topMovies"><img class="searchby-img" src="img/searchby-movie.png" alt="Search by movie"/>
-                    <span class="searchby-item-title">Movie</span></a>
-                </section>
-                <section class="grid-item item">
-                    <h2 class="section-head-hide">Song</h2>
-                    <a href="#trending"><img class="searchby-img" src="img/searchby-song.png" alt="Search by song"/>
-                    <span class="searchby-item-title">Song</span></a>
-                </section>
-                <div class="grid-item"></div>
-            </div>
-            <hr class="hr-head">
+        <section class="grid-container">
+            <h2 class="grid-title" id="searchBy">Search By:</h2>
+            <section class="grid-item1 item">
+                <a href="viewArtist.html"><img class="grid-itme-img" src="img/mello_otq1.svg" alt="Search by singer"/>
+                <h2 class="item-title">Artist</h2></a>
+            </section>
+            <section class="grid-item2 item">
+                <a href="viewAlbum.html"><img class="grid-itme-img" src="img/movie_night_fldd.svg" alt="Search by movie"/>
+                <h2 class="item-title">Album</h2></a>
+            </section>
+            <section class="grid-item3 item">
+                <a href="viewLyrics.html"><img class="grid-itme-img" src="img/compose_music_ovo2.svg" alt="Search by song"/>
+                <h2 class="item-title">Song</h2></a>
+            </section>
         </section>
-        <section class="section-top">
-            <h2>Top Picks:</h2>
-            <div class="grid-container">
-                <div class="grid-item"></div>
-                <section class="grid-item item">
-                    <h2 class="section-head-hide">Song1</h2>
-                    <img src="img/placeholder-music.jpg" alt="Top Pick" class="placeholder-img">
-                    <span class="searchby-item-title">Song1</span>
-                </section>
-                <section class="grid-item item">
-                    <h2 class="section-head-hide">Song2</h2>
-                    <img src="img/placeholder-music.jpg" alt="Top Pick" class="placeholder-img">
-                    <span class="searchby-item-title">Song2</span>
-                </section>
-                <section class="grid-item item">
-                    <h2 class="section-head-hide">Song3</h2>
-                    <img src="img/placeholder-music.jpg" alt="Top Pick" class="placeholder-img">
-                    <span class="searchby-item-title">Song3</span>
-                </section>
-                <div class="grid-item"></div>
-            </div>
-            <hr class="hr-head">
+        <section class="grid-container">
+            <h2 class="grid-title">Top Picks:</h2>
+            <section class="grid-item1 item">
+                <a href="viewArtist.html"><img class="grid-itme-img" src="img/beer_celebration_cefj.svg" alt="Search by singer"/>
+                <h2 class="item-title">Album 1</h2></a>
+            </section>
+            <section class="grid-item2 item">
+                <a href="viewAlbum.html"><img class="grid-itme-img" src="img/game_day_ucx9.svg" alt="Search by movie"/>
+                <h2 class="item-title">Album 2</h2></a>
+            </section>
+            <section class="grid-item3 item">
+                <a href="viewLyrics.html"><img class="grid-itme-img" src="img/editable_dywm.svg" alt="Search by song"/>
+                <h2 class="item-title">Album 3</h2></a>
+            </section>
         </section>
-        <section id="trending" class="section-top">
-            <h2>Trending:</h2>
-            <div class="grid-container">
-                <div class="grid-item"></div>
-                <section class="grid-item item">
-                    <h2 class="section-head-hide">Song1</h2>
-                    <img src="img/placeholder-music.jpg" alt="Trending Song" class="placeholder-img">
-                    <span class="searchby-item-title">Song1</span>
-                </section>
-                <section class="grid-item item">
-                    <h2 class="section-head-hide">Song2</h2>
-                    <img src="img/placeholder-music.jpg" alt="Trending Song" class="placeholder-img">
-                    <span class="searchby-item-title">Song2</span>
-                </section>
-                <section class="grid-item item">
-                    <h2 class="section-head-hide">Song3</h2>
-                    <img src="img/placeholder-music.jpg" alt="Trending Song" class="placeholder-img">
-                    <span class="searchby-item-title">Song3</span>
-                </section>
-                <div class="grid-item"></div>
-            </div>
-            <hr class="hr-head">
+        <section class="grid-container">
+            <h2 class="grid-title">Top Artist:</h2>
+            <section class="grid-item1 item">
+                <a href="viewArtist.html"><img class="grid-itme-img" src="img/music_r1se.svg" alt="Search by singer"/>
+                <h2 class="item-title">Artist 1</h2></a>
+            </section>
+            <section class="grid-item2 item">
+                <a href="viewAlbum.html"><img class="grid-itme-img" src="img/walk_in_the_city_1ma6.svg" alt="Search by movie"/>
+                <h2 class="item-title">Artist 2</h2></a>
+            </section>
+            <section class="grid-item3 item">
+                <a href="viewLyrics.html"><img class="grid-itme-img" src="img/happy_music_g6wc.svg" alt="Search by song"/>
+                <h2 class="item-title">Artist 3</h2></a>
+            </section>
         </section>
-        <section id="topMovies" class="section-top">
-            <h2>Top Searched Movies:</h2>
-            <div class="grid-container">
-                <div class="grid-item"></div>
-                <section class="grid-item item">
-                    <h2 class="section-head-hide">Movie1</h2>
-                    <img src="img/placeholder-music.jpg" alt="Top Movie" class="placeholder-img">
-                    <span class="searchby-item-title">Movie1</span>
-                </section>
-                <section class="grid-item item">
-                    <h2 class="section-head-hide">Movie2</h2>
-                    <img src="img/placeholder-music.jpg" alt="Top Movie" class="placeholder-img">
-                    <span class="searchby-item-title">Movie2</span>
-                </section>
-                <section class="grid-item item">
-                    <h2 class="section-head-hide">Movie3</h2>
-                    <img src="img/placeholder-music.jpg" alt="Top Movie" class="placeholder-img">
-                    <span class="searchby-item-title">Movie3</span>
-                </section>
-                <div class="grid-item"></div>
-            </div>
-            <hr class="hr-head">
-        </section>
-        <section id="topArtists" class="section-top">
-            <h2>Top Searched Artists:</h2>
-            <div class="grid-container">
-                <div class="grid-item"></div>
-                <section class="grid-item item">
-                    <h2 class="section-head-hide">Artist1</h2>
-                    <img src="img/placeholder-music.jpg" alt="Top Artist" class="placeholder-img">
-                    <span class="searchby-item-title">Artist1</span>
-                </section>
-                <section class="grid-item item">
-                    <h2 class="section-head-hide">Artist2</h2>
-                    <img src="img/placeholder-music.jpg" alt="Top Artist" class="placeholder-img">
-                    <span class="searchby-item-title">Artist2</span>
-                </section>
-                <section class="grid-item item">
-                    <h2 class="section-head-hide">Artist3</h2>
-                    <img src="img/placeholder-music.jpg" alt="Top Artist" class="placeholder-img">
-                    <span class="searchby-item-title">Artist3</span>
-                </section>
-                <div class="grid-item"></div>
-            </div>
-            <hr class="hr-head">
-        </section>
-        <br>
-        <nav>
-            <h2 style="display:none;">Footer - Navigation Links</h2>
-            <a href="#" title="Go to Top">
-                <img src="img/up.png" alt="Go Up Icon" class="up-icon">
-            </a>
-            <a href="login.html" title="Login Here!!!">
-                <img src="img/admin.png" alt="Go Up Icon" class="login">
-            </a>
-            <ul class="container">
-                <li>
-                    <a href="https://github.com/rvkantpujari" target="blank"><img src="img/social-github.png" alt="Github RKP" class="social-icon"></a>
-                    <a href="https://in.linkedin.com/in/ravikantpujari" target="blank"><img src="img/social-linkedin.png" alt="LinkedIn RKP" class="social-icon"></a>
-                </li>
-                <li class="devs">
-                    Designed &amp; Developed by<br><strong>RAVI KANT &amp; KETAN</strong>
-                </li>
-                <li>
-                    <a href="https://in.linkedin.com/in/ketansuthar" target="blank"><img src="img/social-linkedin.png" alt="LinkedIn KS" class="social-icon"></a>
-                    <a href="https://github.com/ketan-suthar" target="blank"><img src="img/social-github.png" alt="Github KS" class="social-icon"></a>
-                </li>
-            </ul>
-        </nav>
+
+        <footer>
+            <nav>
+                <ul class="container">
+                    <li class="links">
+                        <a href="https://github.com/rvkantpujari" target="blank"><img src="img/social-github.png" alt="Github RKP" class="social-icon"></a>
+                        <a href="https://in.linkedin.com/in/ravikantpujari" target="blank"><img src="img/social-linkedin.png" alt="LinkedIn RKP" class="social-icon"></a>
+                    </li>
+                    <li class="info">
+                        Designed &amp; Developed by<br><strong>RAVI KANT &amp; KETAN</strong>
+                    </li>
+                    <li class="links">
+                        <a href="https://github.com/ketan-suthar" target="blank"><img src="img/social-github.png" alt="Github KS" class="social-icon"></a>
+                        <a href="https://in.linkedin.com/in/ketansuthar" target="blank"><img src="img/social-linkedin.png" alt="LinkedIn KS" class="social-icon"></a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
     </body>
 </html>

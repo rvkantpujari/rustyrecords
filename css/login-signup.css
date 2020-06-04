@@ -1,21 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:500|Ma+Shan+Zheng&display=swap');
 
-* {
+body {
     margin: 0;
     padding: 0;
+}
+
+canvas{
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 0;
 }
 
 h2 a{
     text-decoration:none;
     color:white;
+    background-color: #3586ff;
+    border-radius: 5px;
+    padding:10px;
+    z-index: 1;
 }
 
 .hidden { display: none; }
 
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 100vh;
+    grid-template-columns: 50% auto;
+    grid-template-rows: 100%;
     grid-template-areas: 
     "left   right"
 }
@@ -31,7 +42,7 @@ h2 a{
 
 section.left {
     grid-area: "left";
-    background-color: #3586ff;
+    /*background-color: #3586ff;*/
     font-family: 'Ma Shan Zheng', cursive;
     color: white;
 }
@@ -39,33 +50,27 @@ section.left {
 section.left h2 {
     font-size:6em;
     position: relative;
-    top:40%;
-    left: 15%;
+    top:250px;
+    text-align: center;
     letter-spacing: 2px;
 }
+
+#loginSection {margin-top: 200px;}
+#regSection {margin-top: 160px;}
+
+#loginForm { margin-top: 40px; }
+#regForm { margin-top: 50px; }
 
 section.right {
     grid-area: "right";
     background-color: white;
 }
 
-
-
-nav ul li {list-style: none; display: inline;}
-
-.logo {position: absolute; top: 160px; right: 340px;}
-
-.svg-logo {
-    position: absolute; top: 150px; right: 250px;
-}
+.logo {position: relative; top: 10px; left: 40%; right: 40%;}
 
 img.logo {
     width: 100px;
     height: 70px;
-}
-
-form {
-    margin-top:100px;
 }
 
 li.logo .name { 
@@ -76,14 +81,13 @@ li.logo .name {
 }
 
 .box-container {
-    display: block;
-    margin: 15vh auto;
-    height: 55vh;
-    width: 35vw;
+    position: relative;
+    left:10%;
+    max-width: 35vw;
     border:2px solid black;
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
-    padding-top: 120px;
+    padding: 200px auto;
 }
 
 .box-container:hover {
@@ -93,7 +97,7 @@ li.logo .name {
 .box-container input {
     display: block;
     padding:10px;
-    width:400px;
+    width: 70%;
     border-radius: 4px;
     background: white;
     margin:20px auto;
@@ -103,9 +107,7 @@ li.logo .name {
     border:2px solid red;
 }
 
-#email { margin-top: 125px; }
-
-.link-text { position: relative; left: 100px; top: 25px;}
+.link-text { position: relative; left: 80px; top: 25px;}
 
 input[type="submit"] {
     width:100px;
@@ -114,7 +116,7 @@ input[type="submit"] {
     color: white;
     font-size:20px;
     position: relative;
-    left: 150px;
+    left: 140px;
     top:-30px;
     font-family: 'Poppins',sans-serif;
     border-top-right-radius: 15px;
@@ -125,26 +127,109 @@ input[type="submit"]:hover {
     background-color: #3586ff;
 }
 
-@media only screen and  (max-width:600px) {
-    .top-left-home-icon {display: none;}
-    * {box-sizing: border-box;}
-    .left {display: none;}
-    .box-container { display: block; margin: 50% auto auto 15%; width: 100%; }
-    .box-container input { padding: 6px; }
-    #email { margin-top: -160px; }
-    .link-text { position: relative; left: 50px; top: 0px;}
-    input[type=text], input[type=password], input[type=email] {width: 70%;}
-    input[type=text] {margin-top:-60%;}
-    input[type=submit] { 
-        position: relative; left: 50px; top:-5px;
-        width: 80px; height: 40px;
-        font-size:16px;
-        padding-top: 5px;
+/* iPad Pro */
+@media (max-width:1024px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 100%;
     }
+
+    section.left{display: none;}
+
+    #loginForm, #regForm {margin-top: 50px;}
+
+    #loginSection {margin: 400px 0px 0px 50px;}
+    #regSection {margin: 400px 0px 0px 50px;}
+    
+    .box-container{
+        max-width:70vw;
+    }
+    
+    .box-container input { 
+        padding: 6px; 
+        font-size: 22px; 
+        height: 30px;
+    }
+
     .logo {
         position: relative;
-        top: -100px;
-        left: 30%;
+        top: 10px;
+        left: 300px;
+        height: 100px;
+        width: 120px;
     }
-    svg {display: none;}
+
+    .link-text { position: relative; left: 110px; top: 0px; font-size: 22px;}
+    
+    input[type=submit] { 
+        position: relative; 
+        left: 190px; 
+        top:-5px;
+        width: 100px; 
+        height: 60px;
+        font-size: 20px;
+        padding-top: 5px;
+    }
+}
+
+/* iPad */
+@media (max-width:768px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    section.left{display: none;}
+
+    #loginForm, #regForm {margin-top: 50px;}
+
+    #loginSection {margin: 280px 0px 0px 40px;}
+    #regSection {margin: 280px 0px 0px 40px;}
+
+    .box-container{
+        max-width: 70vw;
+    }
+    
+    .box-container input { padding: 6px; font-size: 22px; height: 30px;}
+
+    /*.logo {position: relative; top: 20px; left: 210px;}*/
+    .logo {position: relative; top: 10px; left: 40%; right: 70%;}
+
+    .link-text { position: relative; left: 80px; top: 0px;}
+    
+    input[type=submit] { 
+        position: relative; 
+        left: 140px; 
+        top:-5px;
+        width: 100px; 
+        height: 60px;
+        font-size: 20px;
+        padding-top: 5px;
+    }
+}
+
+/* Mobile First */
+@media (max-width:425px) {
+    section.left{display: none;}
+    .box-container{
+        max-width: 70vw;
+    }
+
+    #loginForm, #regForm {margin-top: 40px;}
+
+    #loginSection {margin: 30% 0px 0px 20px;}
+    #regSection {margin: 120px 0px 0px 20px;}
+
+    .box-container input { padding: 5px; font-size: 14px; height: 20px;}
+    
+    .logo {position: relative; top: 10px; left: 30%; right: 25%;}
+    
+    .link-text { position: relative; left: 40px; top: 0px; font-size: 14px;}
+    
+    input[type=submit] {
+        position: relative; left: 60px; top:-5px;
+        width: 80px; 
+        height: 50px;
+        font-size: 14px;
+        padding-top: 5px;
+    }
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
 html{
     margin: 0;
     padding: 0;
@@ -41,6 +43,9 @@ body {
 li a {
     position: relative;
     top: 60px;
+    font-family: 'Acme', sans-serif;
+    font-weight: 700;
+    columns: white;
 }
 
 #logo_sm{display: none;}
@@ -50,13 +55,6 @@ li a {
     top:-30px;
 }
 
-.top-display-container {
-    display: grid;
-    grid-template-columns: 20% 80%;
-    grid-template-areas: 
-    'left-d right-d';
-}
-
 #head-text {
     padding-left: 5rem;
     font-size: 5rem;
@@ -64,14 +62,40 @@ li a {
     color: white;
 }
 
+.top-display-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: 
+    'left-d right-d';
+}
+
 .left-disp {
     grid-area: 'left-d';
     padding: 2rem;
+    border:1px solid black;
 }
 
 .right-disp {
     grid-area: 'right-d';
     padding: 2rem;
+    border:1px solid black;
+}
+
+.top-about-container {
+    display: grid;
+    grid-template-columns: repeat(4, fr);
+    grid-template-rows: repeat(5, auto);
+    grid-column-gap:20px;
+    grid-row-gap: 20px;
+}
+
+.profile-img{
+    height: 150px;
+    width: 150px;
+}
+
+.one {
+    
 }
 
 footer{
@@ -79,9 +103,6 @@ footer{
 }
 
 .flex-container {
-    position: absolute;
-    left: 0;
-    bottom: -40px;
     width: 100%;
     display: flex;
     flex-direction: row;
