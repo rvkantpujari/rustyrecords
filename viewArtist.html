@@ -5,42 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/favicon.ico">
     <title>View Artist | Rusty Records</title>
-    <link rel="stylesheet" href="./css/main-style.css">
+    <link rel="stylesheet" href="./css/main-styles.css">
 </head>
 <body>
-    <section class="wrapper">
-        <section>
-            <nav class="main-nav">
-                <span id="logo_sm"><a href="index.html"><img src="./img/logo_tp.png" height="100" alt="Rusty Records Logo"></a></span>
-                <ul>
-                    <li><a href="viewAlbum.html">Album</a></li>
-                    <li><a href="viewArtist.html">Artist</a></li>
-                    <span id="logo"><a href="index.html"><img src="./img/logo_tp.png" alt="Rusty Records Logo"></a></span>
-                    <li><a href="viewLyrics.html">Lyrics</a></li>
-                    <li><a href="aboutUs.html">About Us</a></li>
-                </ul>
-            </nav>
+    <nav class="main-nav">
+        <h2 style="display: none;">NavBar</h2>
+        <ul>
+            <li class="nav-item-1"><a href="viewAlbum.html">Album</a></li>
+            <li class="nav-item-2"><a href="viewArtist.html">Artist</a></li>
+            <span class="nav-item-3">
+                <a href="index.html">
+                    <!--<img src="./img/logo_tp.png" alt="Rusty Records Logo" id="logo">-->
+                    <canvas class="logo" id="acetateDisc" id="logo" title="Rusty Records" data-logo="Rusty Records"></canvas>
+                </a>
+            </span>
+            <li class="nav-item-4"><a href="viewLyrics.html">Lyrics</a></li>
+            <li class="nav-item-5"><a href="aboutUs.html">About Us</a></li>
+        </ul>
+    </nav>
+    <section class="top-display-container">
+        <section class="left-disp">
+            <h2>Artist List</h2>
         </section>
-        <section class="top-display-container">
-            <section class="left-disp">
-                Artist List
-            </section>
-            <section class="right-disp">
-                About Artist
-            </section>
+        <section class="right-disp">
+            <h2>Artist's Songs List</h2>
         </section>
-        <!--Footer-->
-        <footer class="flex-container">
-            <p>
-                <a href="https://github.com/rvkantpujari" target="blank"><img src="img/social-github.png" alt="Github RKP" class="social-icon"></a>
-                <a href="https://in.linkedin.com/in/ravikantpujari" target="blank"><img src="img/social-linkedin.png" alt="LinkedIn RKP" class="social-icon"></a>
-            </p>
-            <p class="text">Rusty-Records Copyright &copy;2020</p>
-            <p>
-                <a href="https://in.linkedin.com/in/ketansuthar" target="blank"><img src="img/social-linkedin.png" alt="LinkedIn KS" class="social-icon"></a>
-                <a href="https://github.com/ketan-suthar" target="blank"><img src="img/social-github.png" alt="Github KS" class="social-icon"></a>
-            </p>
-        </footer>
     </section>
+    <footer class="flex-container">
+        <p class="flex-item social-links">
+            <a href="https://github.com/rvkantpujari" target="blank"><img src="img/social-github.png" alt="Github RKP" class="social-icon"></a>
+            <a href="https://in.linkedin.com/in/ravikantpujari" target="blank"><img src="img/social-linkedin.png" alt="LinkedIn RKP" class="social-icon"></a>
+        </p>
+        <p class="flex-item">
+            Rusty Records Copyright &copy;<span id="year"></span>
+            <script>
+                let d = new Date();
+                document.getElementById('year').innerHTML = d.getFullYear();
+            </script>
+        </p>
+        <p class="flex-item social-links">
+            <a href="https://in.linkedin.com/in/ravikantpujari" target="blank"><img src="img/social-linkedin.png" alt="LinkedIn RKP" class="social-icon"></a>
+            <a href="https://github.com/rvkantpujari" target="blank"><img src="img/social-github.png" alt="Github RKP" class="social-icon"></a>
+        </p>
+    </footer>
+    <script src="js/acetateDisc.js"></script>
 </body>
 </html>

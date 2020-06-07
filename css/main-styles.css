@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+section h2 {
+    font-family: 'Acme', sans-serif;
+}
+
+.main-nav ul {
+    display: grid;
+    grid-gap: 5px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns:  repeat(5, 1fr);
+}
+
+.main-nav a {
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem;
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-size: 20px;
+}
+
+.main-nav li a:hover {
+    background: #3586ff;
+    border-radius: 5px;
+    columns: #fff;
+    color:#fff;
+}
+
+li a {
+    position: relative;
+    top: 50px;
+    font-family: 'Acme', sans-serif;
+    font-weight: 700;
+    columns: white;
+}
+
+#logo{
+    position: relative;
+    top:-30px;
+}
+
+.top-display-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-areas: 
+    'left-d right-d';
+    grid-auto-rows: minmax(300px, auto);
+    grid-column-gap: 10px;
+    padding: 0px 10px;
+}
+
+.top-about-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    'left-about right-about';
+    grid-auto-rows: minmax(300px, auto);
+    grid-column-gap: 10px;
+    padding: 0px 10px;
+}
+
+.left-disp {
+    grid-area: 'left-d';
+    padding: 2rem;
+    border:1px solid black;
+}
+
+.right-disp {
+    grid-area: 'right-d';
+    padding: 2rem;
+    border:1px solid black;
+}
+
+.left-about {
+    grid-area: 'left-about';
+    padding: 2rem;
+    border:1px solid black;
+}
+
+.right-about {
+    grid-area: 'right-about';
+    padding: 2rem;
+    border:1px solid black;
+}
+
+/* Footer starts from here. */
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    margin-top: 50px;
+    background-color: #3586ff;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.flex-item {
+    font-size: 20px;
+    align-self: center;
+    justify-self: center;
+    color: white;
+}
+
+.social-links {
+    padding: 0px 10px;
+    align-self: center;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius:4px;
+}
+
+@media (max-width:768px)
+{
+    .main-nav ul {
+        display: grid;
+        grid-gap: 5px;
+        padding: 0;
+        list-style: none;
+        grid-template-columns:  repeat(3, 1fr);
+    }
+    .main-nav a{
+        font-size: 16px;
+    }
+    .nav-item-1{
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
+    .nav-item-2{
+        grid-area: 2 / 1 / span 1 / span 1;
+    }
+    .nav-item-3{
+        grid-area: 2 / 2 / span 1 / span 1;
+    }
+    .nav-item-4{
+        grid-area: 1 / 3 / span 1 / span 1;
+    }
+    .nav-item-5{
+        grid-area: 2 / 3 / span 1 / span 1;
+    }
+
+    #logo{
+        width: 140px;
+        height: 100px;
+    }
+
+    canvas {
+        width: 100px;
+        margin-top: -20px;
+    }
+
+    .main-nav a{
+        padding: 1rem;
+    }
+
+    .top-display-container {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        margin-bottom: 80px;
+    }
+
+    /* Footer starts from here. */
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width:468px)
+{
+    .main-nav { margin-top: -50px; }
+    #logo{
+        width: 100px;
+        height: 70px;
+        margin-top: 10px;
+    }
+    h2{ font-size: 20px; }
+    .top-display-container { display: block; }
+    .left-disp, .right-disp {
+        height: 200px;
+        margin-top: 1rem;
+        overflow-y: auto;
+    }
+    .top-about-container {
+        display: flex;
+        flex-direction: column;
+        /*margin: 5px;*/
+    }
+    .left-about, .right-about {
+        flex-basis: 200px;
+        justify-content: center;
+    }
+    /* Footer starts from here. */
+    .flex-container { height: 100px; }
+    .flex-item {
+        padding-top: 5px 10px;
+        font-size: 18px;
+    }
+    .social-links { padding: 0px 30px; }
+}
+
+@media (max-width:350px)
+{
+    #logo{
+        width: 90px;
+        height: 60px;
+        margin-top: 10px;
+    }
+    h2{ font-size: 16px; }
+    .main-nav a{ font-size: 12px; }
+    .right-disp { margin-bottom: 120px; }
+    /* Footer starts from here. */
+    .social-icon {
+        width: 25px;
+        height: 25px;
+    }
+    .social-links { padding: 0px 30px; }
+}

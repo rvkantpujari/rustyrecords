@@ -5,25 +5,23 @@
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <link rel="icon" href="img/favicon.ico">
         <link rel="stylesheet" href="css/login-signup.css">
-        <script>
-            //alert(window.innerWidth);
-        </script>
     </head>
     <body>
         <h1 class="hidden">Login with Rusty Records</h1>
-        <!--<img src="img/home.png" alt="Home Icon" class="top-left-home-icon">-->
         <section class="grid-container">
             <h2 class="hidden">Grid Containers</h2>
             <section class="left">
-                <canvas></canvas>
+                <!--<canvas id="movingBalls"></canvas>-->
                 <h2><a href="index.html">Rusty Records</a></h2>
             </section>
             <section class="right box-container" id="loginSection">
                 <h2 class="hidden">Login Box</h2>
-                <h2 class="hidden">Logo with SVG background</h2>
                 <a href="index.html" title="Rusty Records">
-                    <img src="img/logo_tp.png" alt="Logo" class="logo">
+                    <canvas class="logo" id="acetateDisc"></canvas>
                 </a>
+                <!--<a href="index.html" title="Rusty Records">
+                    <img src="img/logo_tp.png" alt="Logo" class="logo">
+                </a>-->
                 <form method="POST" id="loginForm">
                     <input type="text" placeholder="Enter Email">
                     <input type="password" placeholder="Enter Password">
@@ -32,6 +30,7 @@
                 </form>
             </section>
         </section>
-        <script src="js/canvas.js"></script>
+        <script type="text/javascript" src="js/acetateDisc.js"></script>
+        <!--<script src="js/movingBalls.js"></script>-->
     </body>
 </html>

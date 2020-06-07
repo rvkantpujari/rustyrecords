@@ -6,12 +6,33 @@
     padding: 0;
 }
 
-#logo {
+.login-icon {
+    position: fixed;
+    right: 10px;
+    bottom: 150px;
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.go-up-icon {
+    position: fixed;
+    right: 10px;
+    bottom: 110px;
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+canvas, #logo {
     position: absolute;
-    top:80px;
-    margin-left:42%;
-    width: 200px;
-    height:150px;
+    top:15%;
+    margin-left:47%;
+    width: 100px;
+    height:100px;
 }
 
 a:link, a:visited, a:hover {color:black;}
@@ -69,7 +90,7 @@ section .wave {
 
 section .wave.wave1 {
     animation: animate 30s linear infinite;
-    z-index: 1000;
+    z-index: 100;
     opacity: 1;
     animation-delay: 0s;
     bottom: 0;
@@ -87,7 +108,7 @@ section .wave.wave1 {
 
 section .wave.wave2 {
     animation: animate2 30s linear infinite;
-    z-index: 999;
+    z-index: 99;
     opacity: 0.7;
     animation-delay: -15s;
     bottom: 10px;
@@ -163,7 +184,7 @@ section > h2 {
     grid-area: 2 / 4 / span 1 / span 1;
 }
 
-.grid-itme-img{
+.grid-item-img{
     height: 180px;
     max-width: 200px;
 }
@@ -178,41 +199,64 @@ section > h2 {
 
 /* Footer starts from here */
 
-footer nav{
-    margin-top: 40px;
+footer {
+    width: 100%;
+    height: 70px;
+    margin-top: 50px;
     background-color: #3586ff;
 }
 
-nav ul li {
-    list-style: none;
-}
-
-.container {
+.flex-container {
     display: flex;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    flex-wrap: nowrap;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.links {
-    flex: 1;
-    margin-left: 5px;
-}
-
-.info {
-    flex: 3;
-    color: white;
+.flex-item {
+    font-family: 'Poppins', sans-serif;
     font-size: 20px;
-    border-top-color: white;
+    align-self: center;
+    color: white;
+}
+
+.social-links {
+    padding: 0px 10px;
+    align-self: center;
 }
 
 .social-icon {
     width: 40px;
     height: 40px;
+    border-radius:4px;
 }
 
-@media(max-width:725px)
+@media(max-width:1024px){
+    canvas, #logo {
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        margin-left:40%;
+        width: 100px;
+        height:100px;
+    }
+    section h1 {
+        position: relative;
+        top: 0%;
+        font-size: 6em; 
+        letter-spacing: 2px;
+        text-align: center;
+    }
+    #searchbtn {
+        position: relative;
+        top:0px;
+    }
+    footer {
+        height: 100px;
+    }
+}
+
+@media(max-width:768px)
 {
     .grid-container{
         display: grid;
@@ -230,21 +274,49 @@ nav ul li {
     .grid-item3 {
         grid-area: 4 / 2 / span 1 / span 1;
     }
-    #logo {
+    
+    canvas, #logo {
         position: absolute;
-        top:90px;
-        margin-left:42%;
-        width: 160px;
-        height:120px;
-    }
+        top: 15%;
+        left: 5%;
+        margin-left:40%;
+        width: 100px;
+        height:100px;
+    }    
     section h1 {
-        font-size: 6em; letter-spacing: 2px;
-        margin-left: -10px;
+        position: relative;
+        top:10px;
+    }
+    #searchbtn {
+        position: relative;
+        top:10px;
+    }
+    .flex-item {
+        font-size: 18px;
+    }
+    .social-icon {
+        height: 30px;
+        width: 30px;
     }
 }
 
-@media(max-width:425px)
+@media(max-width:468px)
 {
+    canvas, #logo {
+        position: absolute;
+        top: 15%;
+        left: 4%;
+        margin-left:35%;
+        width: 80px;
+        height:80px;
+    }
+    section h1 {
+        font-size: 4rem;
+    }
+    #searchbtn {
+        top: 30px;
+        left: -80px;
+    }
     .grid-container{
         display: grid;
         grid-template-columns: 10px 1fr 10px;
@@ -258,18 +330,11 @@ nav ul li {
     .grid-item3 {
         grid-area: 4 / 2 / span 1 / span 1;
     }
-    #logo {
-        position: absolute;
-        top:90px;
-        margin-left:42%;
-        width: 160px;
-        height:120px;
+    .flex-container {
+        flex-direction: column;
+        height: 150px;
     }
-    #searchbtn {
-        margin-left:40px;
-    }
-    section h1 {
-        font-size: 6em; letter-spacing: 2px;
-        margin-left: -10px;
+    .flex-item {
+        padding-top: 15px;
     }
 }
