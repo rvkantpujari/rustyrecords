@@ -5,6 +5,20 @@
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <link rel="icon" href="img/favicon.ico">
         <link rel="stylesheet" href="css/login-signup.css">
+        <style>
+            #errorMsgs {
+                grid-area: 2 / 2 / span 1 / span 1;
+                /*margin: 0px 0px 10% 10%;*/
+                /*margin-top: 10%;*/
+                height: 20%;
+                padding-left: 10%;
+                color: red;
+                font-weight: 600;
+                font-size: 16px;
+                border:1px solid black;
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
         <h1 class="hidden">Login with Rusty Records</h1>
@@ -22,15 +36,19 @@
                 <!--<a href="index.html" title="Rusty Records">
                     <img src="img/logo_tp.png" alt="Logo" class="logo">
                 </a>-->
-                <form method="POST" id="loginForm">
-                    <input type="text" placeholder="Enter Email">
-                    <input type="password" placeholder="Enter Password">
+                <form method="GET" id="loginForm">
+                    <input type="text" placeholder="Enter Email" id="inpEmail">
+                    <input type="password" placeholder="Enter Password" id="inpPswrd">
                     <a href="signup.html" class="link-text">Don't have an account?</a>
-                    <input type="submit" value="Login">
+                    <input type="submit" value="Login" id="submitBtn">
                 </form>
+                <!--<span id="errorMsgs">
+                    ravi
+                </span>-->
             </section>
         </section>
         <script type="text/javascript" src="js/acetateDisc.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
         <!--<script src="js/movingBalls.js"></script>-->
     </body>
 </html>
