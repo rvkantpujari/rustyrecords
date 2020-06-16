@@ -38,8 +38,7 @@ canvas, #logo {
 a:link, a:visited, a:hover {color:black;}
 
 #main{
-    width: 100%;
-    height: 100vh;
+    height: 95vh;
     background: #3586ff;
     overflow: hidden;
     z-index: 100;
@@ -82,7 +81,7 @@ section h1{
 
 section .wave {
     position: absolute;
-    bottom: 0;
+    top: 85vh;
     width: 100%;
     height: 100px;
     background-image: url('/img/wave.png');
@@ -232,6 +231,9 @@ footer {
 }
 
 @media(max-width:1024px){
+    #main {
+        height: 92vh;
+    }
     canvas, #logo {
         position: absolute;
         top: 15%;
@@ -302,6 +304,9 @@ footer {
 
 @media(max-width:468px)
 {
+    #main {
+        height:88vh;
+    }
     canvas, #logo {
         position: absolute;
         top: 15%;
@@ -317,6 +322,11 @@ footer {
         top: 30px;
         left: -80px;
     }
+
+    section .wave {
+        top: 80vh;
+    }
+
     .grid-container{
         display: grid;
         grid-template-columns: 10px 1fr 10px;
@@ -336,5 +346,6 @@ footer {
     }
     .flex-item {
         padding-top: 15px;
+        font-size: 16px;
     }
 }

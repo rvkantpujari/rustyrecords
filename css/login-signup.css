@@ -4,13 +4,6 @@ body {
     margin: 0;
 }
 
-/*canvas{
-    position: absolute;
-    top:0;
-    left: 0;
-    z-index: 0;
-}*/
-
 h2 a{
     text-decoration:none;
     color:white;
@@ -118,6 +111,43 @@ input[type="submit"]:hover {
     background-color: #3586ff;
 }
 
+/* Errors: Modal Box */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /* iPad Pro */
 @media (max-width:1024px) {
     .grid-container {
@@ -145,7 +175,7 @@ input[type="submit"]:hover {
     .logo {
         position: relative;
         top: 10px;
-        left: 35%;
+        left: 40%;
         height: 150px;
         width: 170px;
     }
@@ -171,10 +201,16 @@ input[type="submit"]:hover {
     }
     section.left{display: none;}
 
-    #loginForm, #regForm {margin-top: 50px;}
+    #loginForm, #regForm {margin-top: 40px;}
 
-    #loginSection {margin: 280px 0px 0px 40px;}
-    #regSection {margin: 280px 0px 0px 40px;}
+    #loginSection, #regSection {margin: 20% 0px 0px 40px;}
+
+    .logo {
+        position: relative;
+        left: 35%;
+        height: 130px;
+        width: 150px;
+    }
 
     .box-container{
         max-width: 70vw;
@@ -189,7 +225,7 @@ input[type="submit"]:hover {
     
     input[type=submit] { 
         position: relative; 
-        left: 140px; 
+        left: 100px; 
         top:-5px;
         width: 100px; 
         height: 60px;
@@ -199,35 +235,57 @@ input[type="submit"]:hover {
 }
 
 /* Mobile First */
-@media (max-width:425px) {
+@media (max-width:568px) 
+{
     section.left{display: none;}
-    .box-container{
-        max-width: 70vw;
-    }
-
+    .box-container{ max-width: 70vw; }
     #loginForm, #regForm {margin-top: 40px;}
-
     #loginSection {margin: 40% 0px 0px 20px;}
-    #regSection {margin: 120px 0px 0px 20px;}
-
+    #regSection {margin: 30% 0px 0px 20px;}
     .box-container input { padding: 5px; font-size: 14px; height: 20px;}
-    
     .logo {
         position: relative; 
         top: 10px; 
-        left: 30%; 
+        left: 35%; 
         right: 25%;
         width: 90px;
         height: 90px;
     }
-    
-    .link-text { position: relative; left: 40px; top: 0px; font-size: 14px;}
-    
+    .link-text { position: relative; left: 60px; top: 0px; font-size: 14px;}
     input[type=submit] {
-        position: relative; left: 60px; top:-5px;
+        position: relative; 
+        left: 90px;
         width: 80px; 
         height: 50px;
         font-size: 14px;
         padding-top: 5px;
     }
+}
+
+@media (max-width:468px) {
+    #loginSection {margin: 30% 0px 0px 20px;}
+    #regSection {margin: 20% 0px 0px 20px;}
+    input[type=submit] {
+        position: relative;
+        left:25%;
+        height: 50px;
+        font-size: 14px;
+        padding-top: 5px;
+    }
+}
+
+@media (max-width:350px) {
+    .logo {
+        position: relative; 
+        left: 30%; 
+    }
+    input[type=submit] {
+        position: relative;
+        left:25%;
+        height: 40px;
+        width: 70px;
+        font-size: 14px;
+        padding-top: 5px;
+    }
+    .link-text { position: relative; left: 30px; font-size: 13px;}
 }

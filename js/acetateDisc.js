@@ -26,25 +26,25 @@ function randomColor(colors)
 })*/
 
 addEventListener('resize', () => {
-  canvas.width = window.innerWidth
-  canvas.height = window.innerHeight
-
-  location.reload();
-  init(canvas.width*0.5);
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    if(!(document.URL).endsWith('index.html') || !(document.URL).endsWith(''))
+        location.reload();
+    init(canvas.width*0.5);
 })
 
 function DrawAcetateDisc(X,Y,Radius)
 {
     c.fillStyle = "rgba(0,0,0,0.08)";
     c.beginPath();
-    c.arc(X, Y, Radius, 2 * Math.PI, false);
+    c.arc(X, Y, Radius/1.1, 2 * Math.PI, false);
     c.fill();
 
     c.beginPath();
-    if(document.URL.includes("index")==true)
-      c.fillStyle = "#3586ff";
-    else
-      c.fillStyle = "white";
+    // if(document.URL.includes("index")==true)
+    //   c.fillStyle = "#3586ff";
+    // else
+    c.fillStyle = "white";
     c.arc(X, Y, Radius/2.5, 2 * Math.PI, false);
     c.fill();
 
@@ -108,7 +108,7 @@ function animate()
 {
   requestAnimationFrame(animate)
 
-  c.fillStyle = "rgba(255,255,255,0.01)";
+  c.fillStyle = "rgba(255,255,255,0.02)";
   c.fillRect(0, 0, canvas.width, canvas.height)
   
   DrawAcetateDisc(canvas.width/2, canvas.height/2, canvas.width*0.5);

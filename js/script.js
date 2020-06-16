@@ -5,6 +5,7 @@ const inpName = document.getElementById('inpName');
 const inpEmail = document.getElementById('inpEmail');
 const inpPswrd = document.getElementById('inpPswrd');
 const inpCnfPswrd = document.getElementById('inpCnfPswrd');
+let modal = document.getElementById("myModal");
 
 form.addEventListener('submit', (e) => 
 {
@@ -47,6 +48,25 @@ form.addEventListener('submit', (e) =>
     }
     if(err_msgs.length > 0){
         e.preventDefault();
-        alert(err_msgs.join("\n"));
+        //document.getElementById('errMsg').textContent = err_msgs.join("<br>");
+        document.getElementById('errMsg').innerHTML = "";
+        for(let m in err_msgs){
+            //console.log(err_msgs[m]);
+            document.getElementById('errMsg').innerHTML +=err_msgs[m]+"<br><br>";
+        }
+        modal.style.display = "block";
+        //alert(err_msgs.join("\n"));
     }
 });
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+let span = document.getElementById("closeModal");
+
+span.onclick = function() {
+    modal.style.display = "none";
+}

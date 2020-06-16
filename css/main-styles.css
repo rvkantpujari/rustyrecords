@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
-html{
+* {
     margin: 0;
     padding: 0;
+}
+
+html{
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     color: black;
@@ -27,11 +30,10 @@ section h2 {
     text-align: center;
     color: #333;
     text-transform: uppercase;
-    font-size: 1.1rem;
     font-size: 20px;
 }
 
-.main-nav li a:hover {
+.main-nav li a:hover, .main-nav li a.active {
     background: #3586ff;
     border-radius: 5px;
     columns: #fff;
@@ -56,8 +58,9 @@ li a {
     grid-template-columns: 30% 70%;
     grid-template-areas: 
     'left-d right-d';
-    grid-auto-rows: minmax(300px, auto);
-    grid-column-gap: 10px;
+    grid-template-rows: 70vh;
+    /*grid-auto-rows: minmax(auto, 70vh);
+    grid-column-gap: 10px;*/
     padding: 0px 10px;
 }
 
@@ -66,20 +69,22 @@ li a {
     grid-template-columns: 50% 50%;
     grid-template-areas: 
     'left-about right-about';
-    grid-auto-rows: minmax(300px, auto);
+    grid-auto-rows: minmax(500px, auto);
     grid-column-gap: 10px;
     padding: 0px 10px;
 }
 
 .left-disp {
     grid-area: 'left-d';
-    padding: 2rem;
+    padding: 0.8rem;
     border:1px solid black;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .right-disp {
     grid-area: 'right-d';
-    padding: 2rem;
+    padding: 0.8rem;
     border:1px solid black;
 }
 
@@ -95,15 +100,61 @@ li a {
     border:1px solid black;
 }
 
+ul li.list-info {
+    list-style: none;
+    padding: 10px;
+}
+
+.list-info {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.list-item-img {
+    height: 60px;
+    width: 60px;
+    margin-left: 15px;
+}
+
+.list-item-img > img {
+    height: 50px;
+    width: 50px;
+    margin: 2px 5px;
+    padding: 1px;
+}
+
+.list-item-name {
+    width: 300px;
+    margin: 10px 15px;
+    height: 50px;
+}
+
+.list-item-name h3 {
+    margin-top: 10px;
+    cursor: pointer;
+    line-height: 2px;
+}
+
+.list-item-name p {
+    font-size: 14px;
+    line-height: 2.5rem;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+}
+
+ul > hr {
+    width: 95%;
+}
+
 /* Footer starts from here. */
 
 footer{
     position: fixed;
-    left: 0;
     bottom: 0;
     width: 100%;
     height: 70px;
-    margin-top: 50px;
     background-color: #3586ff;
 }
 
@@ -133,6 +184,13 @@ footer{
     border-radius:4px;
 }
 
+@media (max-width:1024px) {
+    footer .flex-container {
+        position: fixed;
+        bottom: 0px;
+    }
+}
+
 @media (max-width:768px)
 {
     .main-nav ul {
@@ -142,45 +200,38 @@ footer{
         list-style: none;
         grid-template-columns:  repeat(3, 1fr);
     }
-    .main-nav a{
-        font-size: 16px;
-    }
-    .nav-item-1{
-        grid-area: 1 / 1 / span 1 / span 1;
-    }
-    .nav-item-2{
-        grid-area: 2 / 1 / span 1 / span 1;
-    }
-    .nav-item-3{
-        grid-area: 2 / 2 / span 1 / span 1;
-    }
-    .nav-item-4{
-        grid-area: 1 / 3 / span 1 / span 1;
-    }
-    .nav-item-5{
-        grid-area: 2 / 3 / span 1 / span 1;
-    }
+    .main-nav a { font-size: 16px; }
+    .main-nav a { padding: 1rem; }
+    
+    .nav-item-1 { grid-area: 1 / 1 / span 1 / span 1; }
+    .nav-item-2 { grid-area: 2 / 1 / span 1 / span 1; }
+    .nav-item-3 { grid-area: 2 / 2 / span 1 / span 1; }
+    .nav-item-4 { grid-area: 1 / 3 / span 1 / span 1; }
+    .nav-item-5 { grid-area: 2 / 3 / span 1 / span 1; }
 
     #logo{
         width: 140px;
         height: 100px;
     }
-
     canvas {
         width: 100px;
         margin-top: -20px;
     }
-
-    .main-nav a{
-        padding: 1rem;
-    }
-
     .top-display-container {
         display: grid;
         grid-template-columns: 40% 60%;
-        margin-bottom: 80px;
     }
-
+    /* Song Section */
+    footer {
+        position: relative;
+        top:10px;
+    }
+    .list-item-name h3 {
+        font-size: 14px;
+    }
+    .list-item-name p {
+        font-size: 12px;
+    }
     /* Footer starts from here. */
     .social-icon {
         width: 30px;
@@ -190,7 +241,6 @@ footer{
 
 @media (max-width:468px)
 {
-    .main-nav { margin-top: -50px; }
     #logo{
         width: 100px;
         height: 70px;
@@ -199,7 +249,7 @@ footer{
     h2{ font-size: 20px; }
     .top-display-container { display: block; }
     .left-disp, .right-disp {
-        height: 200px;
+        height: 300px;
         margin-top: 1rem;
         overflow-y: auto;
     }
@@ -209,10 +259,13 @@ footer{
         /*margin: 5px;*/
     }
     .left-about, .right-about {
-        flex-basis: 200px;
         justify-content: center;
     }
     /* Footer starts from here. */
+    footer {
+        position: relative;
+        top:10px;
+    }
     .flex-container { height: 100px; }
     .flex-item {
         padding-top: 5px 10px;
@@ -230,8 +283,21 @@ footer{
     }
     h2{ font-size: 16px; }
     .main-nav a{ font-size: 12px; }
-    .right-disp { margin-bottom: 120px; }
-    /* Footer starts from here. */
+    .left-disp, .right-disp { height: 50vh;}
+    /* Footer starts from here. */   
+    .flex-container {
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .flex-item {
+        font-size: 16px;
+        margin-top: 5px;
+    }
     .social-icon {
         width: 25px;
         height: 25px;

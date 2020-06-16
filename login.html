@@ -5,20 +5,6 @@
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <link rel="icon" href="img/favicon.ico">
         <link rel="stylesheet" href="css/login-signup.css">
-        <style>
-            #errorMsgs {
-                grid-area: 2 / 2 / span 1 / span 1;
-                /*margin: 0px 0px 10% 10%;*/
-                /*margin-top: 10%;*/
-                height: 20%;
-                padding-left: 10%;
-                color: red;
-                font-weight: 600;
-                font-size: 16px;
-                border:1px solid black;
-                text-align: center;
-            }
-        </style>
     </head>
     <body>
         <h1 class="hidden">Login with Rusty Records</h1>
@@ -42,9 +28,14 @@
                     <a href="signup.html" class="link-text">Don't have an account?</a>
                     <input type="submit" value="Login" id="submitBtn">
                 </form>
-                <!--<span id="errorMsgs">
-                    ravi
-                </span>-->
+            </section>
+        </section>
+        <section id="myModal" class="modal" style="border-color: black;">
+            <!-- Modal content -->
+            <section class="modal-content">
+                <span id="closeModal" class="close">&times;</span>
+                <h1>Errors:</h1>
+                <p id="errMsg">Modal Text</p>
             </section>
         </section>
         <script type="text/javascript" src="js/acetateDisc.js"></script>
