@@ -94,6 +94,7 @@ li.logo .name {
 .link-text { position: relative; left: 15%; top: 25px;}
 
 input[type="submit"] {
+    -webkit-appearance: none;
     width:100px;
     height: 50px;
     background: #3599ff;

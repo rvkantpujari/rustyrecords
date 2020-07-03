@@ -28,8 +28,8 @@ function randomColor(colors)
 addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    if(!(document.URL).endsWith('index.html') || !(document.URL).endsWith(''))
-        location.reload();
+    if((document.URL).includes('index.html')===false && (document.URL).endsWith('.com')===false)
+        //location.reload();
     init(canvas.width*0.5);
 })
 
